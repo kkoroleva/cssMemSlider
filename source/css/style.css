@@ -1,0 +1,200 @@
+:root {
+  --controls: rgba(114, 171, 250, 1);
+  --controls-hover: white;
+  --main-background: rgba(36, 40, 43, 1);
+
+  --text-basic: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-background);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  margin: 3em auto 0;
+  max-width: 795px;
+  height: fit-content;
+  overflow: hidden;
+  display: grid;
+  gap: 3em 0;
+  grid-template-rows: 1fr 2em;
+  grid-template-columns: 3fr 1fr;
+
+}
+
+@media (max-width: 320px) and (max-width: 520px) {
+  .slider-wrapper {
+    max-width: 300px;
+    margin: 3em 1em 0 1em;
+    padding: 0;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    overflow-x: hidden;
+  }
+}
+
+/*Стилизация блоков грида*/
+.slider-nav {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin: 0;
+  display: flex;
+  justify-content: end;
+  border: none;
+  height: 2em;
+}
+
+.slider-images {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  width: 401%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.slider-texts {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 100%;
+  height: 4em;
+  overflow: hidden;
+}
+
+@media (max-width: 320px) and (max-width: 520px) {
+  .slider-nav {
+    grid-column: 1/2;
+    justify-content: center;
+  }
+
+  .slider-images {
+    grid-column: 1/2;
+    max-height: 130px;
+  }
+
+  .slider-texts {
+    grid-row: 3/4;
+    max-height: 1em;
+  }
+}
+
+/*Стилизация элементов навигации*/
+
+.slider-page_radio {
+  display: none;
+}
+
+#page1:checked ~ .slider-nav #label1 .svg-circle, 
+#page2:checked ~ .slider-nav #label2 .svg-circle,
+#page3:checked ~ .slider-nav #label3 .svg-circle,
+#page4:checked ~ .slider-nav #label4 .svg-circle {
+  fill: transparent;
+  stroke: var(--controls);
+}
+
+#page1:checked:hover ~ .slider-nav #label1 .svg-circle, 
+#page2:checked:hover ~ .slider-nav #label2 .svg-circle,
+#page3:checked:hover ~ .slider-nav #label3 .svg-circle,
+#page4:checked:hover ~ .slider-nav #label4 .svg-circle {
+  fill: transparent;
+  stroke: var(--controls-hover);
+}
+
+.slider-page_radio-label {
+  padding: 5px;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.slider-page_radio-label:hover .svg-circle {
+  fill: var(--controls-hover);
+  stroke: var(--controls-hover);
+}
+
+
+
+/*Стилизация картинок слайдера*/
+
+.image-list_item {
+  transition: all .4s ease;
+}
+
+.image-list_img {
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+@media (max-width: 320px) and (max-width: 520px) { 
+  .image-list_img {
+    max-width: 287px;
+    max-height: 130px;
+  }
+}
+/*Стилизация текстов слайдера*/
+
+.text-list_item {
+  height: 2em;
+  transition: all .4s ease;
+}
+
+.text-list_text {
+  color: var(--text-basic);
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/*Переходы слайдера*/
+#page1:checked ~ .image-list #img1 {
+  margin-left: 0%;
+}
+
+#page2:checked ~ .image-list #img1 {
+  margin-left: -25%;
+}
+#page3:checked ~ .image-list #img1 {
+  margin-left: -50%;
+}
+#page4:checked ~ .image-list #img1 {
+  margin-left: -75%;
+}
+
+#page1:checked ~  .text-list #text1 {
+  margin-top: 0%;
+}
+#page2:checked ~ .text-list #text1 {
+  margin-top: -2em;
+}
+#page3:checked ~ .text-list #text1 {
+  margin-top: -4em;
+}
+#page4:checked ~ .text-list #text1 {
+  margin-top: -6em;
+}
