@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/source/css/style.css" rel="stylesheet">
     <title>CSS Mem-Slider</title>
 </head>
+
 <body>
     <section class="slider-wrapper">
-        <h1 class = "slider-header visually-hidden">CSS Mem-Slider</h1>
-        <ul class="slider-nav">
-            <li class="slider-nav_page">1</li>
-            <li class="slider-nav_page">2</li>
-            <li class="slider-nav_page">3</li>
-            <li class="slider-nav_page">4</li>
-        </ul>
-        <ul class = "slider-list">
-            <li class = "slider-item">
-                <img src="/source/img/1.jpg" width="800" height="533" alt="Mem number 1">
-                <p class = "slider-text">Look at me</p>
+        <h1 class="slider-header visually-hidden">CSS Mem-Slider</h1>
+        <fieldset class="slider-nav">
+            <input class="slider-page_radio" id="page1" name="page" type="radio" class="slider-nav_page-radio" checked
+                value="1">
+            <label class="slider-page_radio-label" for="page1">
+                <a href="#mem1">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10 10">
+                        <circle class="svg-circle" cx="50%" cy="50%" r="4" fill="rgba(114, 171, 250, 1)"
+                            stroke="rgba(114, 171, 250, 1)" stroke-width="1"> </circle>
+                    </svg>
+                </a>
+            </label>
+            <input class="slider-page_radio" id="page2" name="page" type="radio" class="slider-nav_page-radio"
+                value="2">
+            <label class="slider-page_radio-label" for="page2">
+                <a href="#mem2">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10 10">
+                        <circle class="svg-circle" cx="50%" cy="50%" r="4" fill="rgba(114, 171, 250, 1)"
+                            stroke="rgba(114, 171, 250, 1)" stroke-width="1"> </circle>
+                    </svg>
+                </a>
+            </label>
+            <input class="slider-page_radio" id="page3" name="page" type="radio" class="slider-nav_page-radio"
+                value="3">
+            <label class="slider-page_radio-label" for="page3">
+                <a href="#mem3">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10 10">
+                        <circle class="svg-circle" cx="50%" cy="50%" r="4" fill="rgba(114, 171, 250, 1)"
+                            stroke="rgba(114, 171, 250, 1)" stroke-width="1"> </circle>
+                    </svg>
+                </a>
+            </label>
+            <input class="slider-page_radio" id="page4" name="page" type="radio" class="slider-nav_page-radio"
+                value="4">
+            <label class="slider-page_radio-label" for="page4">
+                <a href="#mem4" class="">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 10 10">
+                        <circle class="svg-circle" cx="50%" cy="50%" r="4" fill="rgba(114, 171, 250, 1)"
+                            stroke="rgba(114, 171, 250, 1)" stroke-width="1"> </circle>
+                    </svg>
+                </a>
+            </label>
+        </fieldset>
+        <ul class="slider-list">
+            <li class="slider-item" id="mem1">
+                <img class="slider-item_img" src="/source/img/1.jpg" width="795" height="355" alt="Mem number 1">
+                <p class="slider-item_text">Look at me</p>
             </li>
-            <li class = "slider-item">
-                <img src="/source/img/2.jpg" width="800" height="533" alt="Mem number 2">
-                <p class = "slider-text">Then at your man</p>
+            <li class="slider-item" id="mem2">
+                <img class="slider-item_img" src="/source/img/2.jpg" width="795" height="355" alt="Mem number 2">
+                <p class="slider-item_text">Then at your man</p>
             </li>
-            <li class = "slider-item">
-                <img src="/source/img/3.jpg" width="800" height="533" alt="Mem number 3">
-                <p class = "slider-text">Then again at me</p>
+            <li class="slider-item" id="mem3">
+                <img class="slider-item_img" src="/source/img/3.jpg" width="795" height="355" alt="Mem number 3">
+                <p class="slider-item_text">Then again at me</p>
             </li>
-            <li class = "slider-item">
-                <img src="/source/img/4.jpg" width="800" height="533" alt="Mem number 4">
-                <p class = "slider-text">I'll defeat him</p>
+            <li class="slider-item" id="mem4">
+                <img class="slider-item_img" src="/source/img/4.jpg" width="795" height="355" alt="Mem number 4">
+                <p class="slider-item_text">I'll defeat him</p>
             </li>
         </ul>
     </section>
 </body>
+
 </html>
