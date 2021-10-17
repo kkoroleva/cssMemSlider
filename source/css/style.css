@@ -1,0 +1,113 @@
+:root {
+  --controls: rgba(114, 171, 250, 1);
+  --controls-hover: white;
+  --main-background: rgba(36, 40, 43, 1);
+
+  --text-basic: white;
+}
+
+
+body {
+    background-color: var(--main-background);
+    margin: 0;
+}
+  
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+   list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .slider-wrapper {
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    max-width: 800px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /*Стилизация навигации*/
+  .slider-nav {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    border: none;
+  }
+
+  .slider-page_radio {
+    display: none;
+  }
+
+  .slider-page_radio:checked + .slider-page_radio-label .svg-circle, .slider-page_radio-label a:visited + .slider-page_radio-label .svg-circle {
+    stroke: var(--controls);
+    fill: transparent;
+  }
+
+  .slider-page_radio:checked:hover + .slider-page_radio-label .svg-circle {
+    fill: transparent;
+    stroke: var(--controls-hover);
+  }
+
+  .slider-page_radio-label {
+    padding: 5px;
+    display: block;
+    width: 15px;
+    height: 15px;
+  }
+
+  .slider-page_radio-label:hover .svg-circle{
+    fill: var(--controls-hover);
+    stroke: var(--controls-hover);
+  }
+
+  /*Стилизация слайдера*/
+
+  .slider-list {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+  }
+
+  .slider-item {
+    min-width: 800px;
+    height: 400px;
+  }
+
+  .slider-item:hover {
+    transition: all 500ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  }
+
+  .slider-item_img {
+    border: 1px solid transparent;  
+    border-radius: 20px;
+  }
+
+  .slider-item_text {
+    color: var(--text-basic);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
